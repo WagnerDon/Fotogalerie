@@ -1,0 +1,344 @@
+body {
+    margin: unset;
+    font-family: monospace;
+    margin: 5px;
+}
+
+.disable-scrolling {
+    /*muss ins body*/
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    /*schaltet doppel-klick aus*/
+}
+
+h1 {
+    margin: unset;
+    font-size: 50px;
+    text-align: center;
+}
+
+h1:hover {
+    font-size: 52px;
+    transition: 225ms;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-none {
+    display: none !important;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content img {
+    min-height: 356px;
+    max-height: 356px;
+    max-width: 356px;
+    min-width: 356px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.off {
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.off button {
+    height: 30px;
+    width: 30px;
+}
+
+.on {
+    height: 60px;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.on button {
+    height: 30px;
+    width: 30px;
+}
+
+.icon-papa {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+.icon:hover {
+    height: 52px;
+    width: 52px;
+    transition: 225ms;
+}
+
+.img-div {
+    position: relative;
+    margin: 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.overlay {
+    /*entweder du rufst das Overlay mit Javascript herbei, oder du machst das Overlay transparent und gibst ihn ein background:hover effekt*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background: radial-gradient(transparent, rgba(0, 0, 0, 0.5));
+    /*Lösung für wenn auf delete Button, Hintergrund weg*/
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.fullscreen:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 225ms;
+}
+
+overlay:hover {
+    /*entweder transition oder radient*/
+    background: rgba(0, 0, 0, 0.20);
+    transition: 225ms;
+    /*ausgesetzt weil overlay bereits einen Hintergrund hat*/
+}
+
+.div-fullscreen {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.div-fullscreen img {
+    border-radius: 10px;
+    max-width: calc(100% - 300px);
+    max-height: 95%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    /*transparent sieht schöner aus*/
+}
+
+.click-next {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.click-next img {
+    width: 30px !important;
+    height: 30px !important;
+    /*hat minimun und maximum Werte damit es nicht zusammengequetscht wird*/
+    min-width: 30px !important;
+    min-height: 30px !important;
+    z-index: 5 !important;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.background {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    outline: unset;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.delete:hover {
+    outline: none;
+    color: red;
+    transition: 225ms;
+}
+
+.add {
+    display: flex;
+    column-gap: 10px;
+}
+
+.add input {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.add img {
+    height: 30px;
+    width: 30px;
+}
+
+.add div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.add img:hover {
+    height: 32px;
+    width: 32px;
+    transition: 225ms;
+}
+
+.diashow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+
+.diashow img {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.diashow img:hover {
+    height: 32px;
+    width: 32px;
+}
+
+@media (max-width: 1285.6px) {
+    #content img {
+        min-width: 280px;
+        max-width: 280px;
+        min-height: 280px;
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 970px) {
+    #content img {
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 200px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    #content img {
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 410px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h1:hover {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 360px) {
+    .off {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #content img {
+        min-width: 100px;
+        max-width: 100px;
+        min-height: 100px;
+        max-height: 100px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon:hover {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 200px) {
+    .on {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h1:hover {
+        font-size: 30px;
+    }
+}

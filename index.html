@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.G</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body id="body" onload="ini()">
+    <div id="fullscreen" class="fullscreen display-none"></div>
+    <div class="header">
+        <div id="off">
+            <h1 class="off cursor-pointer" onclick="switchMenu('off')">PHOTO GALLERY</h1>
+        </div>
+        <div id="on" class="on display-none">
+            <div class="add">
+                <!-- form only works with button -->
+                <input id="input" type="text" placeholder="Add Online-Photo https://...">
+                <div onmouseover="changeIcon('plus-color')" onmouseleave="changeIcon('plus')"><img id="plus"
+                        src="img/plus.png" onclick="addImg()"></div>
+            </div>
+            <div onclick="renderPhotos()" class="icon-papa cursor-pointer">
+                <img class="icon" id="photoIcon" src="img/photo.png" alt="Photo Icon">
+            </div>
+            <div onclick="renderDeletedPhotos()" class="icon-papa cursor-pointer" onclick=" ">
+                <img class="icon" id="binIcon" src="img/bin.png" alt="Bin Icon">
+            </div>
+            <div onclick="back()" class="icon-papa cursor-pointer" onmouseover="changeIcon('back-black')"
+                onmouseleave="changeIcon('back')">
+                <img class="icon" id="backIcon" class="icon" src="img/back.png" alt="Back Icon">
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <img src="img/photo-color.png" alt="Dummy Photo">
+    </div>
+</body>
+
+</html>
